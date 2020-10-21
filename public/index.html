@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Voice Command Chess" />
+    <meta name="author" content="Dason Wang" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Hello!</title>
+
+    <!-- Redirect to http-->
+    <link rel="canonical" href="https://chess-api-3.glitch.me" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <!-- import chessboard.js, a javascript library which renders the chessboard -->
+    <script src="js/chessboard-1.0.0.js"></script>
+    <link rel="stylesheet" href="css/chessboard-1.0.0.min.css" />
+
+    <!-- import chess.js, a javascript library which validates moves and sets the rules -->
+    <script src="chessrules/chess.js"></script>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1 id="title">Lets get some JSON showing up...</h1>
+    <button onclick="go()">Fetch</button>
+    <button onclick="test()">Test</button>
+
+    <p>
+      Use the following link to generate a random FEN and then check for wins
+      and losses with API:
+      <a href="http://bernd.bplaced.net/fengenerator/fengenerator.html"
+        >FEN GENERATOR</a
+      >
+    </p>
+
+    <p id="turn">Turn:</p>
+    <p id="moves">Moves:</p>
+    <p id="checkmate">Checkmate:</p>
+    <p id="stalemate">Stalemate:</p>
+    <p id="next">Analysis of best next move:</p>
+    <p id="user">Current User: None</p>
+    <input type="text" id="input" />
+
+    <div id="board1"></div>
+    <label>Status:</label>
+    <div id="status"></div>
+    <label>FEN:</label>
+    <div id="fen"></div>
+  </body>
+</html>
